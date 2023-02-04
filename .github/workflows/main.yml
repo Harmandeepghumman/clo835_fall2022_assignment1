@@ -2,18 +2,14 @@ name: Deploy to ECR
 
 on: 
   push:
-    branches: [ master ]
+    branches: [ prod ]
 
 jobs:
-  
   build:
-    
     name: Build Image
     runs-on: ubuntu-latest
 
-   
     steps:
-
     - name: Check out code
       uses: actions/checkout@v2
 
@@ -26,11 +22,13 @@ jobs:
         AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
         AWS_REGION: us-east-1
 
-    - name: Build, test, tag, and push image to Amazon ECR
+    - name: Build and push images to Amazon ECR
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: clo835-week3-harman
-        IMAGE_TAG: v0.1
+        IMAGE_TAG_APP: app.v0.1
+        IMAGE_TAG_DB: db.v0.1
+
       run: |
         docker build -t $ECR_REGISTRY/${ECR_REPOSITORY}:${IMAGE_TAG_DB} -f Dockerfile_mysql .
         docker build -t $ECR_REGISTRY/${ECR_REPOSITORY}:${IMAGE_TAG_APP} -f Dockerfile .
