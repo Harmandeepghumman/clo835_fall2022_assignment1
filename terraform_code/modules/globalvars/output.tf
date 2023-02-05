@@ -1,7 +1,7 @@
 # Default tags
 output "default_tags" {
   value = {
-    "Owner" = "Irina"
+    "Owner" = "Harman"
     "App"   = "Web"
     "Project" = "CLO835"
   }
