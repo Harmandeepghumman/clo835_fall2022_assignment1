@@ -1,0 +1,12 @@
+##### terraform files
+.terraform/
+ terraform.tfstate
+ terraform.tfstate.backup
+
+ # .tfstate files
+*.tfstate
+*.tfstate.*
+ 
+##### keys
+assignment1-dev
+assignment1-dev.pub
