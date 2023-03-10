@@ -22,7 +22,7 @@ spec:
         - containerPort: 3306
         env:
         - name: DBHOST
-          value: "0.0.0.0"
+          value: "10.244.0.5"
         - name: DBPORT
           value: "3306"
         - name: DBPWD
