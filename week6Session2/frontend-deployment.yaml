@@ -15,7 +15,7 @@ spec:
         app: employees
     spec:
       containers:
-      - name: guestbook
+      - name: frontend
         image: 969395510710.dkr.ecr.us-east-1.amazonaws.com/clo835-week3-harman:app.v0.1
         # image: gcr.io/google-samples/gb-frontend:v4
         env:
