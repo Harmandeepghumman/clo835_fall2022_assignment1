@@ -3,17 +3,17 @@ kind: ReplicaSet
 metadata:
   name: backend
   labels:
-    app: guestbook
+    app: mysql
 spec:
   # modify replicas according to your case
   replicas: 3
   selector:
     matchLabels:
-      tier: backend
+      app: mysql
   template:
     metadata:
       labels:
-        tier: backend
+        app: mysql
     spec:
       containers:
       - name: backend
