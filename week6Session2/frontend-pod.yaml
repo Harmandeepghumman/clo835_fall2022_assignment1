@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: pod
+metadata:
+  name: frontend
+  labels:
+spec:
+  containers:
+  - name: frontend
+    image: 969395510710.dkr.ecr.us-east-1.amazonaws.com/clo835-week3-harman:app.v0.1
+    ports:
+    - containerPort: 8080

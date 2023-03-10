@@ -3,8 +3,6 @@ kind: pod
 metadata:
   name: backend
   labels:
-    app.kubernetes.io/name: mongo
-    app.kubernetes.io/component: backend
 spec:
   containers:
   - name: backend
