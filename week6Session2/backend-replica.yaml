@@ -1,21 +1,27 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: frontend
+  name: backend
   labels:
     app: guestbook
-    tier: frontend
 spec:
   # modify replicas according to your case
   replicas: 3
   selector:
     matchLabels:
-      tier: frontend
+      tier: backend
   template:
     metadata:
       labels:
-        tier: frontend
+        tier: backend
     spec:
       containers:
-      - name: php-redis
-        image: gcr.io/google_samples/gb-frontend:v3
+      - name: backend
+        image: 969395510710.dkr.ecr.us-east-1.amazonaws.com/clo835-week3-harman:db.v0.13
+        ports:
+        - containerPort: 3306
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: db_pass123
+        - name: DBPORT
+          value: "3306"
