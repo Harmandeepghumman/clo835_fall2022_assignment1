@@ -23,7 +23,7 @@ spec:
         # image: gcr.io/google-samples/gb-frontend:v4
         env:
         - name: DBHOST
-          value: "10.244.0.19"
+          value: "10.244.0.5"
         - name: DBPORT
           value: "3306"
         - name: DBPWD
