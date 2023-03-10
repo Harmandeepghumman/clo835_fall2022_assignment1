@@ -9,3 +9,10 @@ spec:
     image: 969395510710.dkr.ecr.us-east-1.amazonaws.com/clo835-week3-harman:app.v0.1
     ports:
     - containerPort: 8080
+    env:
+    - name: DBHOST
+      value: "0.0.0.0"
+    - name: DBPORT
+      value: "3306"
+    - name: DBPWD
+      value: "db_pass123"
