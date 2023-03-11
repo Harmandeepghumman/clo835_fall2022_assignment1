@@ -32,7 +32,7 @@ jobs:
 
       run: |
         docker build -t $ECR_REGISTRY/${ECR_REPOSITORY}:${IMAGE_TAG_DB} -f Dockerfile_mysql .
-        docker build -t $ECR_REGISTRY/${ECR_REPOSITORY}:${IMAGE_TAG_DB} -f Dockerfile.new .
+        docker build -t $ECR_REGISTRY/${ECR_REPOSITORY}:${IMAGE_TAG_APP1} -f Dockerfile.new .
         docker build -t $ECR_REGISTRY/${ECR_REPOSITORY}:${IMAGE_TAG_APP} -f Dockerfile .
         docker push $ECR_REGISTRY/${ECR_REPOSITORY}:${IMAGE_TAG_DB}
         docker push $ECR_REGISTRY/${ECR_REPOSITORY}:${IMAGE_TAG_APP1}
