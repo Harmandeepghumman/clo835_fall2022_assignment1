@@ -8,6 +8,8 @@ spec:
   # if your cluster supports it, uncomment the following to automatically create
   # an external load-balanced IP for the frontend service.
   # type: LoadBalancer
+  type: NodePort
+  externalName: mysql.backend.svc.cluster.local  
   ports:
   - port: 8080
     targetPort: 8080
