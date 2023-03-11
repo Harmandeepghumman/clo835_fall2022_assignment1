@@ -6,7 +6,7 @@ metadata:
 spec:
   containers:
   - name: backend
-    image: 969395510710.dkr.ecr.us-east-1.amazonaws.com/clo835-week3-harman:db.v0.1
+    image: 969395510710.dkr.ecr.us-east-1.amazonaws.com/clo835-week3-harman:database.01
     ports:
     - containerPort: 3306
     env:
